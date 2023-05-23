@@ -1,0 +1,4 @@
+Ключ API:2b15838aeeca2717c2311fc28fc79239
+Приклад API-запиту: https://api.themoviedb.org/3/movie/550?api_key=2b15838aeeca2717c2311fc28fc79239
+
+Токен доступу для читання API:  eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyYjE1ODM4YWVlY2EyNzE3YzIzMTFmYzI4ZmM3OTIzOSIsInN1YiI6IjY0NmM2Y2M4MmJjZjY3MDE3MmIyZjg5MyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.oW1qwdkKVITtpAl5x2OQ9iAGMMNSDjxSgNwwy6Ego2Y
