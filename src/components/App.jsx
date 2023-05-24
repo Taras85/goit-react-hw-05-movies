@@ -3,6 +3,8 @@ import MovieDetails from "pages/MovieDetails";
 import Movies from "pages/Movies";
 import { Route, Routes } from "react-router-dom";
 import Header from "./Header/Header";
+import Cast from "./Cast/Cast";
+import Review from "./Reviews/Review";
 
 export const App = () => {
   return (
@@ -22,8 +24,10 @@ export const App = () => {
             <Route index element={<GetTrending />}/>
             <Route path="movies" element={<Movies />}/>
             {/* <Route path="moviedetails" element={<MovieDetails />}/> */}
-            <Route path="movies/:moviesId" element={<MovieDetails />}></Route>
-
+            <Route path="movies/:moviesId" element={<MovieDetails />}>
+                <Route path="cast" element={<Cast />} />
+                <Route path="reviews" element={<Review />} />
+            </Route>
           </Route>
 
       </Routes>
