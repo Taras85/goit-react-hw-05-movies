@@ -2,9 +2,12 @@ import React from 'react'
 
 const Movies  = () => {
   return (
-    <div>
-      
-    </div>
+    <form >
+      <label>
+          <input type={'text'} name="query" />
+          <button type="submit">SEARCH</button>
+      </label>
+    </form>
   )
 }
 
