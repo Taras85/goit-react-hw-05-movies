@@ -1,13 +1,21 @@
-import MovieItem from 'components/MovieItem/MovieItem'
-import React from 'react'
 
-const MovieList = () => {
+import React from 'react'
+import { Link, useLocation } from 'react-router-dom';
+
+const MovieList = ({movies}) => {
+  const location = useLocation();
   return (
-    <div>
-     УЛ
-      <MovieItem/>
-    </div>
-  )
+    <ul>
+      {movies.map(({ original_title, id }) => (
+        <li key={id}>
+          <Link to={`/movies/${id}`} state={{ from: location }}>
+            {original_title}
+          </Link>
+       
+        </li>
+      ))}
+    </ul>
+    )
 }
 
 export default MovieList
