@@ -5,7 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import Header from "./Header/Header";
 import Cast from "./Cast/Cast";
 import Review from "./Reviews/Review";
-import s from './App.module.css'
+// import s from './App.module.css'
 
 export const App = () => {
   return (
