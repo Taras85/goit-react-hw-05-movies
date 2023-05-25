@@ -3,6 +3,7 @@ import Loader from 'components/Loader/Loader';
 import React, { useEffect, useState } from 'react'
 import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import s from './MovieDetails.module.css'
 
 const MovieDetails = () => {
   const [movieData, setMovieData] = useState([]);
@@ -34,13 +35,13 @@ const MovieDetails = () => {
   }, [error]);
 
   return (
-    <section >
+    <section className={s.movie_container}>
       {movieData && (
         <>
           <Link  to={backLink}>
             GO BACK
           </Link>
-          <div >
+          <div className={s.movie_details}>
             <img
               
               src={`https://image.tmdb.org/t/p/w200${movieData.poster_path}`}

@@ -1,0 +1,69 @@
+.header_container {
+
+    
+    padding: 20px;
+    background-color: #4fa94d;
+    height: 30px;
+
+
+}
+.navlink{
+    padding: 10px;
+}
+
+
+
+/* 
+.SearchForm {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.Button {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    border: 0;
+    background-image: url('../../../public/search.svg');
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.6;
+    cursor: pointer;
+    outline: none;
+}
+
+.Button:hover {
+    opacity: 1;
+
+}
+
+.label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    clip-path: inset(50%);
+    border: 0;
+}
+.input {
+    display: inline-block;
+    width: 100%;
+    font: inherit;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.input::placeholder {
+    font: inherit;
+    font-size: 18px;
+} */

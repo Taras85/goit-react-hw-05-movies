@@ -1,7 +1,10 @@
 import { getMovieQuery } from 'API/APIThemoviedb';
+import Loader from 'components/Loader/Loader';
 import MovieList from 'components/MovieList/MovieList';
 import React, { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import s from './Movies.module.css'
 
 const Movies  = () => {
   const [movies, setMovies] = useState([]);
@@ -40,11 +43,11 @@ const Movies  = () => {
 
   useEffect(() => {
     if (!error) return;
-    // toast.error(error);
+    toast.error(error);
   }, [error]);
 
   return (
-    <section>
+    <section className={s.movies_container}>
       <div>
         <h1>SEARCH MOVIE</h1>
         <form onSubmit={handleSubmit}>
@@ -55,15 +58,7 @@ const Movies  = () => {
         </form>
         {movies.length > 0 && <MovieList movies={movies} />}
       </div>
-      {/* {isLoading && (
-        <Audio
-          height="80"
-          width="80"
-          radius="9"
-          color="green"
-          ariaLabel="loading"
-        />
-      )} */}
+      {isLoading && <Loader/>}  
     </section>
   );
 }

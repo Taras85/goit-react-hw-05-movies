@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import Header from "./Header/Header";
 import Cast from "./Cast/Cast";
 import Review from "./Reviews/Review";
+import s from './App.module.css'
 
 export const App = () => {
   return (
@@ -23,7 +24,6 @@ export const App = () => {
           <Route path="/" element={<Header/>}>
             <Route index element={<GetTrending />}/>
             <Route path="movies" element={<Movies />}/>
-            {/* <Route path="moviedetails" element={<MovieDetails />}/> */}
             <Route path="movies/:moviesId" element={<MovieDetails />}>
                 <Route path="cast" element={<Cast />} />
                 <Route path="reviews" element={<Review />} />

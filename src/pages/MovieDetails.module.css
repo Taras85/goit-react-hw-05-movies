@@ -1,0 +1,8 @@
+.movie_container{
+    padding-top: 30px;
+}
+
+.movie_details{
+    display: flex;
+    gap: 5px;
+}

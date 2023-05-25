@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react'
 import { getTranding } from 'API/APIThemoviedb';
 // import axios from 'axios';
 import { toast } from 'react-toastify';
+import Loader from 'components/Loader/Loader';
+import s from './GetTrending.module.css'
 
 const GetTrending = () => {
   const [movies, setMovies] = useState([]);
@@ -34,10 +36,10 @@ const GetTrending = () => {
 
 
   return (
-    <div>
+    <div className={s.trending_container}>
        <h1>Tranding today</h1>
        {movies.length > 0 && <MovieList movies={movies} />}
-
+       {isLoading && <Loader/>}  
     </div>
   )
 }
