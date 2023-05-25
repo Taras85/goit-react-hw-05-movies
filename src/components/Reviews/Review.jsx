@@ -1,6 +1,7 @@
 import { getReviews } from 'API/APIThemoviedb';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const Review = () => {
   const { moviesId } = useParams();
@@ -26,7 +27,7 @@ const Review = () => {
   }, [moviesId]);
   useEffect(() => {
     if (!error) return;
-    // toast.error(error);
+    toast.error(error);
   }, [error]);
 
   if (!movieData) {

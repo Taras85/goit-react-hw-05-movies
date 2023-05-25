@@ -1,10 +1,12 @@
 import { getMoviesById } from 'API/APIThemoviedb';
+import Loader from 'components/Loader/Loader';
 import React, { useEffect, useState } from 'react'
 import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const MovieDetails = () => {
   const [movieData, setMovieData] = useState([]);
-  // const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState('');
   const { moviesId } = useParams();
   const location = useLocation;
@@ -21,14 +23,14 @@ const MovieDetails = () => {
       } catch (error) {
         setError('There is something wrong in your action');
       } finally {
-        // setIsLoading(false);
+        setIsLoading(false);
       }
     };
     fetchMovie();
   }, [moviesId]);
   useEffect(() => {
     if (!error) return;
-    // toast.error(error);
+    toast.error(error);
   }, [error]);
 
   return (
@@ -82,15 +84,7 @@ const MovieDetails = () => {
           <Outlet />
         </>
       )}
-      {/* {isLoading && (
-        <Audio
-          height="80"
-          width="80"
-          radius="9"
-          color="green"
-          ariaLabel="loading"
-        />
-      )} */}
+        {isLoading && <Loader/>}  
     </section>
   );
 }

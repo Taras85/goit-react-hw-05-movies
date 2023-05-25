@@ -5,7 +5,7 @@ import { useSearchParams } from 'react-router-dom';
 
 const Movies  = () => {
   const [movies, setMovies] = useState([]);
-  // const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
   const [searchParams] = useSearchParams();
   const [, setSearchParams] = useSearchParams();
@@ -22,7 +22,7 @@ const Movies  = () => {
 
     const fetchMovie = async () => {
       setError('');
-      // setIsLoading(true);
+      setIsLoading(true);
       try {
         const data = await getMovieQuery(searchQuery);
 
@@ -31,7 +31,7 @@ const Movies  = () => {
         setError('There is something wrong in your action');
         console.log(error);
       } finally {
-        // setIsLoading(false);
+        setIsLoading(false);
       }
     };
 
