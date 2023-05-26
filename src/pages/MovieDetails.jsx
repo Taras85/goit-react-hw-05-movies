@@ -11,7 +11,7 @@ const MovieDetails = () => {
   const [error, setError] = useState('');
   const { moviesId } = useParams();
   const location = useLocation;
-  const backLink = location?.state?.from ?? '/';
+  const backLink = location.state?.from ?? '/';
 
   useEffect(() => {
     if (!moviesId) return;
