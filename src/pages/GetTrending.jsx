@@ -1,7 +1,7 @@
 import MovieList from 'components/MovieList/MovieList';
 import React, { useEffect, useState } from 'react'
 import { getTranding } from 'API/APIThemoviedb';
-// import axios from 'axios';
+import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
 import Loader from 'components/Loader/Loader';
 import s from './GetTrending.module.css'
@@ -43,5 +43,9 @@ const GetTrending = () => {
     </div>
   )
 }
+
+GetTrending.propTypes = {
+  movies: PropTypes.arrayOf(PropTypes.object),
+};
 
 export default GetTrending

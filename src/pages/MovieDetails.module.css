@@ -5,4 +5,6 @@
 .movie_details{
     display: flex;
     gap: 5px;
+    padding:  20px 0;
 }
+

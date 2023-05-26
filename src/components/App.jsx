@@ -1,7 +1,7 @@
 import GetTrending from "pages/GetTrending";
 import MovieDetails from "pages/MovieDetails";
 import Movies from "pages/Movies";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Header from "./Header/Header";
 import Cast from "./Cast/Cast";
 import Review from "./Reviews/Review";
@@ -28,6 +28,7 @@ export const App = () => {
                 <Route path="cast" element={<Cast />} />
                 <Route path="reviews" element={<Review />} />
             </Route>
+            <Route path="*" element={<Navigate to="/" />} />
           </Route>
 
       </Routes>

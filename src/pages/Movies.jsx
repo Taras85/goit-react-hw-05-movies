@@ -4,6 +4,7 @@ import MovieList from 'components/MovieList/MovieList';
 import React, { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import PropTypes from 'prop-types';
 import s from './Movies.module.css'
 
 const Movies  = () => {
@@ -12,12 +13,16 @@ const Movies  = () => {
   const [error, setError] = useState('');
   const [searchParams] = useSearchParams();
   const [, setSearchParams] = useSearchParams();
+
   const searchQuery = searchParams.get('q');
+
+
 
   const handleSubmit = e => {
     e.preventDefault();
 
     setSearchParams({ q: e.target.elements.query.value });
+
   };
 
   useEffect(() => {
@@ -55,8 +60,12 @@ const Movies  = () => {
               <input 
               type={'text'} 
               name="query" 
-              autoFocus
-              placeholder="Search movies"  />
+              autoFocus 
+              placeholder="Search movies..." 
+              
+              defaultValue={searchQuery}
+              />
+               
               <button type="submit">SEARCH</button>
             </label>
         </form>
@@ -67,4 +76,12 @@ const Movies  = () => {
   );
 }
 
+Movies.propTypes = {
+  handleSubmit: PropTypes.func,
+  movies: PropTypes.arrayOf(PropTypes.object),
+
+}
+
 export default Movies 
+
+

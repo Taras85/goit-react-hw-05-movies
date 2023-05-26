@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import s from './MovieDetails.module.css'
+import PropTypes from 'prop-types';
 
 const MovieDetails = () => {
   const [movieData, setMovieData] = useState([]);
@@ -46,12 +47,12 @@ const MovieDetails = () => {
     <section className={s.movie_container}>
       {movieData && (
         <>
-          <Link  to={backLink}>
+          <Link  to={backLink} className={s.goback}>
               GO BACK
           </Link>
           <div className={s.movie_details}>
             <img
-              
+
               src={`https://image.tmdb.org/t/p/w200${movieData.poster_path}`}
               alt="movie poster"
             />
@@ -81,11 +82,12 @@ const MovieDetails = () => {
           <ul >
             <li>
               <Link to="cast" state={{ from: backLink }}>
+              
                 Cast
               </Link>
             </li>
             <li>
-              <Link to="reviews" state={{ from: backLink }}>
+              <Link to="reviews" state={{ from: backLink }} >
                 Reviews
               </Link>
             </li>
@@ -99,3 +101,8 @@ const MovieDetails = () => {
 }
 
 export default MovieDetails
+
+
+MovieDetails.propTypes = {
+  to: PropTypes.object,
+}
