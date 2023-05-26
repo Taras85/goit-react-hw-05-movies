@@ -10,9 +10,17 @@ const MovieDetails = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState('');
   const { moviesId } = useParams();
-  const location = useLocation;
+  const location = useLocation();
+
+
+
   const backLink = location.state?.from ?? '/';
 
+  
+  
+ 
+ 
+  
   useEffect(() => {
     if (!moviesId) return;
     const fetchMovie = async () => {
@@ -39,7 +47,7 @@ const MovieDetails = () => {
       {movieData && (
         <>
           <Link  to={backLink}>
-            GO BACK
+              GO BACK
           </Link>
           <div className={s.movie_details}>
             <img
