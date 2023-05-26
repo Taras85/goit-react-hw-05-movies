@@ -52,7 +52,11 @@ const Movies  = () => {
         <h1>SEARCH MOVIE</h1>
         <form onSubmit={handleSubmit}>
             <label>
-              <input type={'text'} name="query"   />
+              <input 
+              type={'text'} 
+              name="query" 
+              autoFocus
+              placeholder="Search movies"  />
               <button type="submit">SEARCH</button>
             </label>
         </form>
