@@ -1,6 +1,6 @@
 import { getMoviesById } from 'API/APIThemoviedb';
 import Loader from 'components/Loader/Loader';
-import React, { useEffect, useState } from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
 import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import s from './MovieDetails.module.css'
@@ -92,7 +92,9 @@ const MovieDetails = () => {
               </Link>
             </li>
           </ul>
+          <Suspense fallback={<Loader/>}>
           <Outlet />
+          </Suspense>
         </>
       )}
         {isLoading && <Loader/>}  
