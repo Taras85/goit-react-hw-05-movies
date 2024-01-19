@@ -79,7 +79,7 @@ const MovieDetails = () => {
             </div>
           </div>
           <h3>Additional information</h3>
-          <ul >
+          <ul className={s.inform_link}>
             <li>
               <Link to="cast" state={{ from: backLink }}>
               

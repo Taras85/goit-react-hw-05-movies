@@ -1,4 +1,4 @@
-/* 
+
 
 p,h1,h2,h3, a{
     margin: 0;
@@ -6,6 +6,7 @@ p,h1,h2,h3, a{
   
   ul, a{
     list-style: none;
+    text-decoration: none;
     margin: 0;
     padding: 0;
-  } */
+  }
