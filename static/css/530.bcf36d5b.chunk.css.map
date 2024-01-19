@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/530.bcf36d5b.chunk.css","mappings":"AAAA,0BACI,gBACJ,CACA,kCACC,YACD,CCLA,gCACI,gBACJ","sources":["components/MovieList/Movie.module.css","pages/Movies.module.css"],"sourcesContent":[".movies_list{\n    padding-top: 20px;\n}\n.movies_link:visited{\n color: purple;\n}",".movies_container{\n    padding-top: 30px;\n}\n\n"],"names":[],"sourceRoot":""}
