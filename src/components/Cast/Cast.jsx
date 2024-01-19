@@ -2,7 +2,7 @@ import { getCast } from 'API/APIThemoviedb';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import s from './cast.module.css'
+import s from './Cast.module.css'
 
 
 
@@ -42,8 +42,8 @@ const Cast = () => {
   }
   return movieData.length > 0 ? (
     //<header>
-      <div className={s.cast_container}>
-        <ul>
+      <div >
+        <ul className={s.cast_list}>
           {movieData.map(cast => (
             <li key={cast.id}>
               <img

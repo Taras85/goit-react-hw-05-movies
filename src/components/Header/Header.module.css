@@ -7,9 +7,28 @@
 
 
 }
-.navlink{
-    padding: 10px;
+
+.active {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
+
+
+.navlink{
+    padding: 20px;
+    color: #ffffff;
+
+}
+
+.navlink:hover,
+.navlink:focus{
+        color: #b4b4b4;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+}
+
+
 
 
 

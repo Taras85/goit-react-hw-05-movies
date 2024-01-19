@@ -48,7 +48,7 @@ const MovieDetails = () => {
       {movieData && (
         <>
           <Link  to={backLink} className={s.goback}>
-              GO BACK
+            GO BACK
           </Link>
           <div className={s.movie_details}>
             <img
@@ -79,15 +79,15 @@ const MovieDetails = () => {
             </div>
           </div>
           <h3>Additional information</h3>
-          <ul className={s.inform_link}>
+          <ul className={s.inform_link_list}>
             <li>
-              <Link to="cast" state={{ from: backLink }}>
+              <Link to="cast" state={{ from: backLink }} className={s.inform_link}>
               
                 Cast
               </Link>
             </li>
             <li>
-              <Link to="reviews" state={{ from: backLink }} >
+              <Link to="reviews" state={{ from: backLink }} className={s.inform_link}>
                 Reviews
               </Link>
             </li>
