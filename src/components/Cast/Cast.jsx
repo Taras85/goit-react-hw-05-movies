@@ -2,7 +2,7 @@ import { getCast } from 'API/APIThemoviedb';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import s from './Cast.module.css'
+import s from './cast.module.css'
 
 
 
