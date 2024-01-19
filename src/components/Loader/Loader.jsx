@@ -1,20 +1,20 @@
-import React from "react";
+import React from 'react';
 
-
-import {InfinitySpin } from "react-loader-spinner";
-
+import {  MagnifyingGlass } from 'react-loader-spinner';
 
 const Loader = () => {
   return (
-    <div >
-        <InfinitySpin 
-        width='200'
+    <div>
+      <MagnifyingGlass
+        visible={true}
+        height="80"
+        width="80"
+        ariaLabel="magnifying-glass-loading"
+        wrapperStyle={{}}
+        wrapperClass="magnifying-glass-wrapper"
+        glassColor="#f7f587"
         color="#4fa94d"
-        timeout ="1000"
-        paddingtop= "50px"
-    
-        
-        />
+      />
     </div>
   );
 };

@@ -15,7 +15,7 @@ code {
 } */
 
 
-/* @import-normalize; */
+@import-normalize;
 
 h1,
 h2,
@@ -44,22 +44,7 @@ img {
   height: auto;
 }
 
-/* button {
-  color: inherit;
-  cursor: pointer;
-} */
 
-/* html {
-  box-sizing: border-box;
-  width: 100vw;
-  overflow-x: hidden;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-} */
 
 body {
   height: 100vh;
